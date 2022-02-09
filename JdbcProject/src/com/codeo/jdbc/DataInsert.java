@@ -10,9 +10,9 @@ public class DataInsert {
 
 	public static void main(String[] args) {
 	Scanner sc=null;
-	String studentName;
-    String  studentmobileno;
-    String studentemailid;
+	String studentName=null;
+    String  studentmobileno=null;
+    String studentemailid=null;
     Connection con=null;
     Statement st=null;
     String query=null;
