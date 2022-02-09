@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
-
+//Best Practices
 public class DataInsert {
 
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class DataInsert {
     String query=null;
     int count=0;
     try {
-    	sc=new Scanner(System.in);
+    	sc=new Scanner(System.in);// created Object of Scanner class
     	System.out.println("Enter studentName");
     	studentName=sc.next();
     	System.out.println("Enter StudentMobileNo");
@@ -27,7 +27,7 @@ public class DataInsert {
     	studentemailid=sc.next();
     	//1. Register JDBC Driver
     	//for Mysql
-    	Class.forName("com.jdbc.mysql.Driver");
+    	Class.forName("com.mysql.jdbc.Driver");
     	//for Oracle
     	//Class.forName("oracle.jdbc.driver.OracleDriver");
     	//for PostGreSQL Database
@@ -37,7 +37,8 @@ public class DataInsert {
     	// con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test", "postgres", "Subho");
     	con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
     	//Write the query
-    	query="insert into student_details(studentname, studentmobileno, studentemailid) values("+studentName+","+studentmobileno+","+studentemailid+")";
+    	//st.executeUpdate("INSERT into family(name, mobile)" +"values('"+name+"', '"+num+"')");
+    	query="insert into student_details(studentname, studentmobileno, studentemailid)" + "values('"+studentName+"','"+studentmobileno+"','"+studentemailid+"')";
     	if(con!=null)
     		st=con.createStatement();
     	
