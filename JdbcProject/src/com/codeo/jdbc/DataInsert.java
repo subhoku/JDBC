@@ -25,9 +25,9 @@ public class DataInsert {
     	studentmobileno=sc.next();
     	System.out.println("Enter StudentEmail id:");
     	studentemailid=sc.next();
-    	//1. Register JDBC Driver
+    	//1. Register JDBC Driver type 4
     	//for Mysql
-    	Class.forName("com.mysql.jdbc.Driver");
+    	Class.forName("com.mysql.cj.jdbc.Driver");
     	//for Oracle
     	//Class.forName("oracle.jdbc.driver.OracleDriver");
     	//for PostGreSQL Database
@@ -45,14 +45,14 @@ public class DataInsert {
     	//Send and execute the SQl Query
     	if(st!=null) {
     		count=st.executeUpdate(query);
-    		
-    	}
+    		System.out.println(count);
+    		    	}
     	//Process the result
-    	if(count!=0) {
-    		System.out.println("Record Inserted Successfully");
+    	if(count==0) {
+    		System.out.println("Issues in record insertion");
     	}
     	else {
-    		System.out.println("Issues in record insertion");
+    System.out.println("Record Inserted Successfully");
     	}
     }
     catch(SQLException sqle) {
