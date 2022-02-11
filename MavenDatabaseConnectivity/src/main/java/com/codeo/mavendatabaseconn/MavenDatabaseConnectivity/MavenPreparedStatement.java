@@ -35,7 +35,7 @@ public class MavenPreparedStatement {
 	    	studentemailid=sc.next();
 	    	//1. Register JDBC Driver type 4
 	    	//for Mysql
-    	Class.forName("com.mysql.jdbc.Driver");
+    	Class.forName("com.mysql.cj.jdbc.Driver");
     	con=DriverManager.getConnection(url,username,password);
     	if(con!=null) {
     	psmt=con.prepareStatement(query);
@@ -44,6 +44,7 @@ public class MavenPreparedStatement {
     		psmt.setString(1, studentName);
     		psmt.setString(2, studentmobileno);
     		psmt.setString(3, studentemailid);
+    	
     	}
     	count=psmt.executeUpdate();
     	if(count!=0) {

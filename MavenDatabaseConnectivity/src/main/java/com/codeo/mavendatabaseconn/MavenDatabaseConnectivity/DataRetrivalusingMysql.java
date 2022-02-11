@@ -15,7 +15,7 @@ public class DataRetrivalusingMysql {
 		ResultSet rs=null;
 		try {
 			//Register the Jdbc Driver Type 4 Driver
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			//Establish the conn....
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
 			//Write a query.
