@@ -39,9 +39,9 @@ public class DataInsert {
     	//Write the query
     	//st.executeUpdate("INSERT into family(name, mobile)" +"values('"+name+"', '"+num+"')");
     	query="insert into student_details(studentname, studentmobileno, studentemailid)" + "values('"+studentName+"','"+studentmobileno+"','"+studentemailid+"')";
-    	if(con!=null)
+    	if(con!=null) {
     		st=con.createStatement();
-    	
+    	}
     	//Send and execute the SQl Query
     	if(st!=null) {
     		count=st.executeUpdate(query);
