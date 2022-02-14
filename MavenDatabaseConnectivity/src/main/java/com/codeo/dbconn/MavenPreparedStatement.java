@@ -15,7 +15,7 @@ public class MavenPreparedStatement {
 	    Connection con=null;
 	    PreparedStatement psmt=null;
 	    String query="insert into student_details(studentname, studentmobileno, studentemailid)" + "values(?,?,?)";
-	    int count=0;
+	    int count=1;
 	    String url="jdbc:mysql://localhost:3306/test";
 	    String username="root";
 	    String password="";
@@ -44,7 +44,7 @@ public class MavenPreparedStatement {
     		psmt.setString(3, studentemailid);
     	}
     	count=psmt.executeUpdate();
-    	if(count!=0) {
+    	if(count==0) {
     		System.out.println("Record Inserted successfully");
     	}
     	else {
