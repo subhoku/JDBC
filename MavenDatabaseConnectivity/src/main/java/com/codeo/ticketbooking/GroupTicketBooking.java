@@ -38,7 +38,6 @@ public class GroupTicketBooking {
 					//2. Establish the connection with d/b
 					
 					try {
-						
 						con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel_management","root","");
 					} catch (SQLException e) {
 						// TODO Auto-generated catch block
