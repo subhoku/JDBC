@@ -17,11 +17,10 @@ public class TicketBookingApp {
 		double movierate=0;
 		int[] result;
 		int viewers=0;
-		String seatno="3";
+		int seatno=3;
 		sc=new Scanner(System.in);
 		if(sc!=null) 
-			System.out.println("Enter MovieName: ");
-			moviename=sc.next();
+			
 			
 			System.out.println("Enter No of Viewers ");
 			viewers=sc.nextInt();
@@ -53,6 +52,8 @@ public class TicketBookingApp {
 					}
 				}
 				for(int i=0;i<viewers;i++) {
+					System.out.println("Enter MovieName: ");
+					moviename=sc.next();
 					System.out.println("Enter Person name: ");
 					name=sc.next();
 					System.out.println("Enter Person Age: ");
@@ -61,16 +62,18 @@ public class TicketBookingApp {
 					try {
 						ps.setString(1, name);
 						ps.setString(2, age);
-						ps.setString(3, seatno);
+						ps.setInt(3, seatno);
 						ps.setString(4, moviename);
 						if(moviename.equals("Spiderman"))
 						{
 							movierate=500.34;
 							ps.setDouble(5, movierate);
+							seatno++;
 						}
 						else if(moviename.equals("Pushpa")) {
 							movierate=200.34;
 							ps.setDouble(5, movierate);
+							seatno++;
 						}
 						else {
 							ps.setDouble(5, movierate);
