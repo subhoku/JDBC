@@ -21,14 +21,20 @@ public class MyFirstServlet extends HttpServlet {
 		pw=response.getWriter();
 		String username=null;
 		String password=null;
+		
+		int age=0;
 		 username=request.getParameter("pname");
 		 password=request.getParameter("pass");
+		 age=Integer.parseInt(request.getParameter("page"));
+		/*
+		 * tage=request.getParameter("page"); age=Integer.parseInt(tage);
+		 */
 		 System.out.println("Username"+username+" Password:"+password);
-		if(username.equals("Aakash") && password.equals("admin")) {
-			pw.println("<body><h1 style='color: green;'>Welcome to your account Mr. "+username+"</h1>");
+		if(age>=18) {
+			pw.println("<h1 style='color: green;'>You are eligible for vote Mr. "+username+"</h1>");
 		}
 		else {
-			pw.println("<h3 style='color: red;'>Incorrect Credentials...</h3></body>");
+			pw.println("<h3 style='color: red;'>Whenever your age will be 18+you can Vote"+"</h3>");
 		}
 		
 	}
