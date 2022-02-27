@@ -19,6 +19,7 @@ public class MyFirstServlet extends HttpServlet {
 		//2 Objects: 1.Request Object, 2. Response Object
 		PrintWriter pw=null;
 		pw=response.getWriter();
+		//response.setContentType("text/html");
 		String username=null;
 		String password=null;
 		
@@ -31,10 +32,10 @@ public class MyFirstServlet extends HttpServlet {
 		 */
 		 System.out.println("Username"+username+" Password:"+password);
 		if(age>=18) {
-			pw.println("<h1 style='color: green;'>You are eligible for vote Mr. "+username+"</h1>");
+			pw.println("<body><h1 style='color: green;'>You are eligible for vote Mr. "+username+"</h1></body>");
 		}
 		else {
-			pw.println("<h3 style='color: red;'>Whenever your age will be 18+you can Vote"+"</h3>");
+			pw.println("<body><h3 style='color: red;'>Whenever your age will be 18+you can Vote"+"</h3></body>");
 		}
 		
 	}

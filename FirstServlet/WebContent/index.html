@@ -1,0 +1,67 @@
+<html>
+<head>
+
+</head>
+<body>
+	<div style="background-color: orange;">
+	<center><h1>Registration form</h1>
+<form action="thirdservlet"  method="post">
+   
+    <label>Name</label>
+	<input type="text" name="name" placeholder="Enter your name" required><br><br>
+	<label>Lastname</label>
+	<input type="text" name="lastname" placeholder="Enter your name"><br><BR>
+	<label>Select age</label>
+  <input type="number" name="age" max="30" min="18"><br><br>
+  	<label>Email</label>
+  <input type="email"  name="Email"><br><br>
+  <label>Select Courses</label>
+  <input list ="technologies" name="technologies" placeholder="select technologies">
+<datalist id="technologies">
+	<option value="C"></option>
+  <option value="C++"></option>
+  <option value="Java"></option>
+  <option value=".NET"></option>
+  <option value="Python"></option>
+  <option value="Blockchain"></option>
+</datalist><br><br>
+<p style="margin-left: -120px">Address</p>
+
+<textarea  name="address" rows="5" cols="30" placeholder="enter address"></textarea><br><br>
+
+	<label>Please select your gender:</label><br>
+  <input type="radio"name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" name="gender" value="other">
+  <label for="other">Other</label><br><br>
+  <label>Select the Date: </label>
+  <input type="date" name="date"><br><br>
+  
+  <label>Select you Degree</label>
+  <select name="Degree">
+  	<option>BE</option>
+  	<option>BCA</option>
+  	<option>BCOM</option>
+  	<option>BSC</option>
+  </select><br><br>
+  <label>Select your Hobbies:</label><br>
+  <label>Playing Cricket</label>
+  <input type="checkbox" name="hobbies"><br><br>
+  <label>Reading Books</label>
+  <input type="checkbox" name="hobbies"><br><br>
+  <label>Listening Music</label>
+  <input type="checkbox" name="hobbies"><br><br>
+
+	<label>Password</label>
+	<input type="Password" name="Password" placeholder="enter Password" minlength="8" maxlength="15"><br><br>
+     <input type="reset" value="reset">
+	<input type="submit" value="submit">
+
+</form>
+</center>
+</div>
+</body>
+
+</html>
