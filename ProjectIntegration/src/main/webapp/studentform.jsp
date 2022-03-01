@@ -52,7 +52,7 @@
                                                                         <input type="password" id="password" name="password" placeholder="Password" class="form-control">
                                                                     </div>
                                                                 </div>
-                                                                <div class="form-actions form-group"><button type="submit" class="btn btn-success btn-sm">Submit</button></div>
+                                                                <center><div class="form-actions form-group"><button style="border-radius:100px" type="submit" class="btn btn-success btn-lg">Submit</button></div></center>
                                                             </form>
                                                         </div>
                                                     </div>
