@@ -57,8 +57,9 @@ ResultSet resultSet = null;
                             <div class="card-header">
                                 <strong class="card-title">Data Table</strong>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" id="myfrm">
                            <div class="row"><div class="col-sm-12">
+                          <p align="center"><input type="button" onclick="myPrint('myfrm')" value="print"></p>
                        <input type="button" class="btn btn-theme" value="Download Excel File" onclick="exportToExcel('bootstrap-data-table-export')" style="margin-left:600px; margin-bottom:20px" />
                        <script src="exportToExcel.js" defer></script>    
                            
@@ -95,7 +96,7 @@ ResultSet resultSet = null;
                                     <td><%=resultSet.getString("email") %></td>
                                     <td><%=resultSet.getString("dtime") %></td>
                                    
-                                   <td><i class="fa fa-edit"></i></td>
+                                   <td><a href="edit.jsp?id=<%=resultSet.getString("id") %>"><i class="fa fa-edit"></i></a></td>
                                    <td><a href="delete.jsp?id=<%=resultSet.getString("id") %>"><i class="fa fa-trash-o"></i></a></td>
                                    </tr>
                                    
@@ -141,7 +142,15 @@ ResultSet resultSet = null;
     <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
     <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
     <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
-
+<script>
+        function myPrint(myfrm) {
+            var printdata = document.getElementById(myfrm);
+            newwin = window.open("");
+            newwin.document.write(printdata.outerHTML);
+            newwin.print();
+            newwin.close();
+        }
+    </script>
 </body>
 
 

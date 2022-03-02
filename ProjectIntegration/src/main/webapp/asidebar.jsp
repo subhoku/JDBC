@@ -22,7 +22,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<aside id="left-panel" class="left-panel" style="background-color: 	#FF4500; width: 210px;">
+<aside id="left-panel" class="left-panel" style="background-color: 	#FF4500; width: 220px;">
         <nav class="navbar navbar-expand-sm navbar-default">
 
             <div class="navbar-header" style="background-color: #FF4500;">
@@ -40,7 +40,7 @@
                     </li>
                   
                     <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Student Master</a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Student Master</a>
                         <ul class="sub-menu children dropdown-menu" style="background-color: #FF4500;">
                             <li><i class="fa fa-puzzle-piece"></i><a href="studentform.jsp">Student Form</a></li>
                             <li><i class="fa fa-id-badge"></i><a href="studentreports.jsp">Student Reports</a></li>
