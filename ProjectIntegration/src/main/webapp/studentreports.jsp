@@ -59,8 +59,8 @@ ResultSet resultSet = null;
                             </div>
                             <div class="card-body" id="myfrm">
                            <div class="row"><div class="col-sm-12">
-                          <p align="center"><input type="button" onclick="myPrint('myfrm')" value="print"></p>
-                       <input type="button" class="btn btn-theme" value="Download Excel File" onclick="exportToExcel('bootstrap-data-table-export')" style="margin-left:600px; margin-bottom:20px" />
+                         <input type="button" class="btn btn-success" style="border-radius:30px;" onclick="myPrint('myfrm')" value="print">
+                       <input type="button" class="btn btn-success" value="Download Excel File" onclick="exportToExcel('bootstrap-data-table-export')" style="margin-left:600px; margin-bottom:20px;border-radius:30px" />
                        <script src="exportToExcel.js" defer></script>    
                            
                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="bootstrap-data-table-export_info">
