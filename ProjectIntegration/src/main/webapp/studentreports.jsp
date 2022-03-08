@@ -1,7 +1,7 @@
 <%@page import="java.sql.*"%>
 <%
 String id = request.getParameter("id");
-String driver = "com.mysql.jdbc.Driver";
+String driver = "com.mysql.cj.jdbc.Driver";
 
 
 

@@ -1,7 +1,7 @@
 <%@page import="java.sql.*"%>
 <%
 String id = request.getParameter("id");
-String driver = "com.mysql.jdbc.Driver";
+String driver = "com.mysql.cj.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
 String database = "test";
 String userid = "root";
@@ -65,7 +65,7 @@ while(resultSet.next()){
                                                             <form action="update.jsp" method="post" >
                                                              <div class="form-group">
                                                                     <div class="input-group">
-                                                                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                                                    
                                                                         <input type="hidden" name="id" placeholder="Username"  class="form-control" value="<%=resultSet.getString("id") %>">
                                                                     </div>
                                                                 </div>

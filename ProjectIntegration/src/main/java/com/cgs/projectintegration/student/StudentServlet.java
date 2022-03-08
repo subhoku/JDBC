@@ -36,7 +36,7 @@ public class StudentServlet extends HttpServlet {
     	finally {
     		
 	    		try {
-					getServletContext().getRequestDispatcher("/studentform.jsp")
+					getServletContext().getRequestDispatcher("/studentreports.jsp")
 					.forward(request, response);
 				} catch (ServletException e) {
 					// TODO Auto-generated catch block

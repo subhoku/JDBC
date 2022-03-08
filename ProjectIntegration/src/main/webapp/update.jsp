@@ -12,7 +12,7 @@ System.out.print(id+" "+username+" "+email+"  "+password1);
 %>
 <%
 
-String driver = "com.mysql.jdbc.Driver";
+String driver = "com.mysql.cj.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
 String database = "test";
 String userid = "root";
